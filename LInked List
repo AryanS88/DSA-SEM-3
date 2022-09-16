@@ -1,0 +1,34 @@
+#include<stdio.h>
+
+struct node{
+int data;
+struct node*next;
+};
+struct node *head;
+struct node *ptr;
+   ptr=(struct node*)malloc(sizeof(struct node));
+
+void insertbeg()
+{
+struct node *ptr;
+int item;
+ptr = (struct node*)malloc(sizeof(struct node*));
+if(ptr==NULL)
+    {
+    printf("overflow");
+    }
+else
+    {
+     printf("\n Enter a Value\n");
+scanf("%d",&item);
+ptr->data=item;
+ptr->next=head;
+head=ptr;
+printf("\n Node inserted\n");
+    }
+}
+int main()
+{
+    void insertbeg();
+return 0;
+}
